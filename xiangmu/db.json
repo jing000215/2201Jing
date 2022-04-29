@@ -1,0 +1,7 @@
+{
+    "goods": [{
+        "img": "./images/small_1.jpg",
+        "title": "json-server",
+        "price": "￥79.9"
+    }]
+}

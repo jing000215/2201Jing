@@ -45,20 +45,22 @@
                     </div>
                 </div>
                 <div class="kengl_kuang">
-                    <div class="txt_kuang">
-                        <input type="text" class="itxt" placeholder="邮箱/用户名/已验证手机">
-                        <input type="text" class="itxt" placeholder="密码">
-                    </div>
-                    <div class="remember">
-                        <div class="fl">
-                            <input type="checkbox">
-                            <label for="autoLoginFlag">自动登录</label>
+                    <form action="">
+                        <div class="txt_kuang">
+                            <input type="text" class="itxt" id="uname" name="" placeholder="邮箱/用户名/已验证手机">
+                            <input class="itxt" type="password" name="" id="password" placeholder="密码">
                         </div>
-                        <div class="fr">
-                            <a href="#" class="fl" target="_blank" title="忘记密码">忘记密码?</a>
+                        <div class="remember">
+                            <div class="fl">
+                                <input type="checkbox">
+                                <label for="autoLoginFlag">自动登录</label>
+                            </div>
+                            <div class="fr">
+                                <a href="#" class="fl" target="_blank" title="忘记密码">忘记密码?</a>
+                            </div>
                         </div>
-                    </div>
-                    <input type="button" tabindex="5" value="登 录" class="btnnuw">
+                        <input type="button" tabindex="5" value="登 录" class="btnnuw">
+                    </form>
                 </div>
                 <div class="corp_login">
                     <div class="mingb_shoq"><a href="#">名榜授权登录！</a></div>
@@ -76,6 +78,8 @@
         </div>
     </div>
 
+    <script src="./js/axios.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 
 </html>

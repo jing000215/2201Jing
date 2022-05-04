@@ -580,6 +580,7 @@ input {}
 }
 
 .dorpdown-layer {
+    height: 200px;
     width: 308px;
     border: 1px solid #E2E2E2;
     position: absolute;
@@ -589,6 +590,8 @@ input {}
     display: none;
     z-index: 100;
     background: #fff;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .dorpdown-layer .smt {

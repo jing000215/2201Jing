@@ -19,7 +19,7 @@ class shangp {
         // 绑定鼠标移入事件
         smallObj.onmouseenter = function() {
 
-            // maskObj.style.display = 'block';
+            maskObj.style.display = 'block';
             bigObj.style.display = 'block';
             // console.log(maskObj, bigObj);
         }
@@ -141,7 +141,7 @@ class shangp {
             // console.log(title);
             let price = document.querySelector('.priceData').innerText;
             // console.log(price);
-            let param = `id=${userId}&img=${img}&title=${title}&price=${price}&shuliang=${1}`;
+            let param = `&img=${img}&title=${title}&price=${price}&shuliang=${1}`;
 
             // console.log(this.baseUsrl);
 

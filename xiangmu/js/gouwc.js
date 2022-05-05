@@ -143,7 +143,7 @@ class goods {
 
             let price = eve.target.parentNode.firstElementChild.nextElementSibling.lastElementChild.firstElementChild.innerText;
             // console.log(price);
-            let param = `id=${goodsId}&img=${img}&title=${title}&price=${price}&shuliang=${1}`;
+            let param = `&img=${img}&title=${title}&price=${price}&shuliang=${1}`;
             // 不为空则添加到json中
             axios.post(this.baseUsrl, param).then(({ status }) => {
                 console.log(status);

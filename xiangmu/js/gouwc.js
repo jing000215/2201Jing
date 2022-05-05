@@ -29,9 +29,6 @@ class goods {
         let ulW = ulObj.offsetWidth;
         // console.log(ulW);
 
-        // 设置商品之间的间距
-        let space = 15;
-
         let page = 1;
         let pageSize = 15;
 
@@ -156,15 +153,6 @@ class goods {
                 }
             })
         }
-
-
-
-
-
-        // console.log(eve.target);
-
-
-
     }
 
     // 操作购物车页面,用户必须登录
@@ -270,7 +258,7 @@ class goods {
     // 删除的方法
     delGoods(target) {
         // console.log(target);
-        console.log(this);
+        // console.log(this);
 
         let ulObj = target.parentNode.parentNode.parentNode.parentNode;
         // console.log(ulObj);
@@ -311,7 +299,7 @@ class goods {
 
             let res = Array.from(this.$('.cart-shop-good .jdcheckbox')).find(checkbox => {
                 // 没有被选中,状态为false
-                console.log(checkbox.checked);
+                // console.log(checkbox.checked);
                 return !checkbox.checked
 
             });

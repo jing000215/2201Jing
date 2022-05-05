@@ -114,7 +114,7 @@ class shangp {
     }
 
     async addCartFn(eve) {
-        console.log(this);
+        // console.log(this);
 
         // 判断是否登录
         let token = localStorage.getItem('token')
@@ -143,7 +143,7 @@ class shangp {
             // console.log(price);
             let param = `id=${userId}&img=${img}&title=${title}&price=${price}&shuliang=${1}`;
 
-            console.log(this.baseUsrl);
+            // console.log(this.baseUsrl);
 
             axios.post(this.baseUsrl, param).then(({ status }) => {
                 console.log(status);

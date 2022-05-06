@@ -16,7 +16,7 @@ class login {
         // console.log(username, password);
         // 注意要发送post请请求
         axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded';
-        // xhr.setReuestHeader
+
         // 对参数进行编码
         let data = `username=${username}&password=${password}`;
         axios.post('http://localhost:8888/users/login', data).then(res => {
@@ -24,17 +24,17 @@ class login {
             let { status, data } = res;
             console.log(data);
 
-            if (status == 200) { // 请求成功
+            if (status == 200) {
                 // 判断是否登录成功
                 if (data.code == 1) {
                     // token 是登录 的 标识符
                     localStorage.setItem('token', data.token);
                     localStorage.setItem('user_id', data.user.id);
-                    //从哪里来,跳转到哪里去
+                    // 从哪来回哪去
                     location.assign(location.search.split('=')[1])
 
 
-                } else { // 登录失败,就提示输入错误
+                } else {
                     layer.open({
                         title: '登录提示',
                         content: '用户名或者密码输入错误'

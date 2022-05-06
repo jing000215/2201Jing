@@ -95,8 +95,6 @@ class goods {
 
             // 计算页面显示列
             let imgW = itemsObj[0].offsetWidth;
-            let columns = parseInt(ulW / imgW);
-            // console.log(columns);
         }
 
         toObj.onclick = loadMore;
@@ -118,7 +116,6 @@ class goods {
         // 跳转
         if (!token) location.assign('./login.html?ReturnUrl=./gouw_che.html')
 
-        // 判断点击的是a标签
         if (eve.target.classList.contains('cart_scroll_btn')) {
             // 商品id或用户id获取
             let lisObj = eve.target.parentNode;
@@ -231,7 +228,7 @@ class goods {
             // console.log(ele.price * ele.shuliang);
             // console.log(html);
         });
-        // console.log(this.$('.container'));
+
 
         this.$('.containers').innerHTML = html;
 
@@ -239,16 +236,16 @@ class goods {
 
     // 直接结构赋值,获取事件源
     distributeEve({ target }) {
-        // console.log(target);
+
         if (target.parentNode.classList.contains('cart-good-fun')) {
-            // console.log(target);
+
 
             this.delGoods(target);
 
         }
 
         if (target.classList.contains('jdcheckbox')) {
-            // console.log(target);
+
             this.getOneGoodsCheck(target);
 
             this.getNumPriceGoods()
@@ -257,8 +254,7 @@ class goods {
 
     // 删除的方法
     delGoods(target) {
-        // console.log(target);
-        // console.log(this);
+
 
         let ulObj = target.parentNode.parentNode.parentNode.parentNode;
         // console.log(ulObj);
@@ -268,7 +264,7 @@ class goods {
         // 获取用户id
         let userId = localStorage.getItem('user_id');
         //发送ajax删除商品数据
-        // console.log(id, userId);
+
 
         axios.delete(this.baseUsrl + '/' + id)
             .then(res => {
@@ -298,8 +294,7 @@ class goods {
             // console.log(this.$('.cart-shop-good .jdcheckbox'));
 
             let res = Array.from(this.$('.cart-shop-good .jdcheckbox')).find(checkbox => {
-                // 没有被选中,状态为false
-                // console.log(checkbox.checked);
+
                 return !checkbox.checked
 
             });
@@ -317,10 +312,10 @@ class goods {
         // 保存数量和价格
         let totalNum = 0;
         let totalPrice = 0;
-        // console.log(goods);
+
 
         goods.forEach(one => {
-            // console.log(one.firstElementChild.firstElementChild);
+
             // 只统计本选中的商品的价格和数量
             if (one.firstElementChild.firstElementChild.firstElementChild.checked) {
                 // console.log(one);

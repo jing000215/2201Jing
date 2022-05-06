@@ -123,13 +123,13 @@ class shangp {
         if (!token) location.assign('./login.html?ReturnUrl=./shangp_xiangq.html')
             // 判断点击的是a标签
         if (eve.target.classList.contains('btn-gouwuche')) {
-            // 商品id或用户id获取
+
             let lisObj = eve.target.parentNode.parentNode;
             // console.log(lisObj);
             let goodsId = lisObj.dataset.id;
             let userId = localStorage.getItem('user_id');
 
-            // 两个id必须都有才能发送请求
+
             if (!userId || !goodsId) throw new Error('两个id存在问题,请打印...');
             axios.defaults.headers.common['authorization'] = token;
 
@@ -165,9 +165,9 @@ class shangp {
         let { data, status } = await axios.get(this.baseUsrl);
         // console.log(data);
 
-        // 判断是否超过有效期,过期则跳转到登录页面
+
         if (data.code == 401) location.assign('./login.html?ReturnUrl=./shangp_xiangq.html')
-            // 判断接口的状态
+
 
         // baseUsrl = 'http://localhost:8888/goods'
 

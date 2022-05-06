@@ -153,7 +153,7 @@ class index {
     // 获取购物车中的数据
     async getCartGoods() {
         const TOKEN = localStorage.getItem('token');
-        // let userId = localStorage.getItem('user_id');
+
         axios.defaults.headers.common['authorization'] = TOKEN;
         let { data, status } = await axios.get(this.baseUsrl);
         // console.log(data);
